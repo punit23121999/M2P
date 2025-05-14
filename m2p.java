@@ -29,7 +29,7 @@ public class m2p {
 		
 		driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys("KUMAR");
 		
-		driver.findElement(By.xpath("(//input[@id='Email'])[1]")).sendKeys("punitkumar33@gmail.com");
+		driver.findElement(By.xpath("(//input[@id='Email'])[1]")).sendKeys("punitkumar33@gmail.com"); //after running once ,increment the number to run again.
 		
 		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("punit23");
 		
