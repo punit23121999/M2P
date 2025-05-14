@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -26,7 +27,15 @@ public class SeleniumWebsite {
         
         assertEquals(driver.getTitle(), expectitle);
 
-        driver.quit();
+        driver.findElement(By.xpath("//span[normalize-space()='Downloads']")).click();
+        
+        String expectedurl = "https://www.selenium.dev/downloads/";
+        
+        String actualurl = driver.getCurrentUrl();
+        
+        System.out.println(actualurl);
+        
+        assertEquals(actualurl, expectedurl);
     }
 }
 
